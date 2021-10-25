@@ -7,7 +7,7 @@ public class UI {
   JLabel titleNameLabel, playerNameLabel;
   JButton startButton, choice1, choice2, choice3, choice4,choice5,choice6;
   JTextArea mainTextArea;
-  Font titleFont = new Font("Times New Roman",Font.PLAIN,90);
+  Font titleFont = new Font("Times New Roman",Font.PLAIN,20);
   Font normalFont = new Font("Times New Roman",Font.PLAIN,26);
 
   public void createUI(Adventure.ChoiceHandler cHandler) {
@@ -22,14 +22,18 @@ public class UI {
 
     //Title screen
     titleNamePanel = new JPanel();
-    titleNamePanel.setBounds(25,25,150,125);
+    titleNamePanel.setBounds(100,100,600,250);
     titleNamePanel.setBackground(Color.black);
+
     titleNameLabel = new JLabel("Welcome to the Adventure Game!\n" +
         "Space edition!!");
+    titleNameLabel.setBounds(100,100,600,250);
+    titleNameLabel.setBackground(Color.black);
     titleNameLabel.setForeground(Color.white);
     titleNameLabel.setFont(titleFont);
     titleNamePanel.add(titleNameLabel);
 
+    //Start knappen
     startButtonPanel = new JPanel();
     startButtonPanel.setBounds(300,400,200,100);
     startButtonPanel.setBackground(Color.black);
