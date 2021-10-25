@@ -3,6 +3,7 @@ import java.awt.event.ActionListener;
 import java.util.Scanner;
 
 public class Adventure {
+  Player creator;
   ChoiceHandler cHandler = new ChoiceHandler();
   UI ui = new UI();
   VisibilityManager vm = new VisibilityManager(ui);
@@ -26,7 +27,9 @@ public class Adventure {
         case "Start":
           vm.titleToTown();
           break;
-        case "c1": break;
+        case "c1":
+          //this.creater.setCurrentRoom(currentRoom.getNorthExit(), "north", true);
+          break;
         case "c2": break;
         case "c3": break;
         case "c4": break;
@@ -69,5 +72,8 @@ public static void startGame(){
     //Calls the go method in the Command class which evaluates the user's command
     command.go(userInput, player.getCurrentRoom(), map.getEndRoom());
   }
+}
+public static String playerName(String userInput){
+    return userInput;
 }
 }

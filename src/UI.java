@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.util.Scanner;
 
 public class UI {
   JFrame window;
@@ -11,6 +12,7 @@ public class UI {
   Font normalFont = new Font("Times New Roman",Font.PLAIN,26);
 
   public void createUI(Adventure.ChoiceHandler cHandler) {
+    Scanner input = new Scanner(System.in);
 
     // Her laver vi vinduen først
     window = new JFrame();
@@ -39,15 +41,15 @@ public class UI {
     startButtonPanel.setBackground(Color.black);
 
     startButton = new JButton("START");
-    startButton.setBackground(Color.black);
-    startButton.setForeground(Color.white);
-    startButton.setFont(normalFont);
-    startButton.setFocusPainted(false);
+    titleNameLabel.setBounds(300,400,200,100);
+    //startButton.setBackground(Color.black);
+    startButton.setForeground(Color.black);
+    //startButton.setFont(normalFont);
     startButton.addActionListener(cHandler);
     startButton.setActionCommand("Start");
     startButtonPanel.add(startButton);
 
-    window.add(titleNameLabel);
+    window.add(titleNamePanel);
     window.add(startButtonPanel);
 
 
@@ -79,7 +81,7 @@ public class UI {
 
     choice1 = new JButton("Go North");
     choice1.setBackground(Color.black);
-    choice1.setForeground(Color.white);
+    choice1.setForeground(Color.black);
     choice1.setFont(normalFont);
     choice1.setFocusPainted(false);
     choice1.addActionListener(cHandler);
@@ -88,7 +90,7 @@ public class UI {
 
     choice2 = new JButton("Go South");
     choice2.setBackground(Color.black);
-    choice2.setForeground(Color.white);
+    choice2.setForeground(Color.black);
     choice2.setFont(normalFont);
     choice2.setFocusPainted(false);
     choice2.addActionListener(cHandler);
@@ -97,7 +99,7 @@ public class UI {
 
     choice3 = new JButton("Go East");
     choice3.setBackground(Color.black);
-    choice3.setForeground(Color.white);
+    choice3.setForeground(Color.black);
     choice3.setFont(normalFont);
     choice3.setFocusPainted(false);
     choice3.addActionListener(cHandler);
@@ -106,7 +108,7 @@ public class UI {
 
     choice4 = new JButton("Go West");
     choice4.setBackground(Color.black);
-    choice4.setForeground(Color.white);
+    choice4.setForeground(Color.black);
     choice4.setFont(normalFont);
     choice4.setFocusPainted(false);
     choice4.addActionListener(cHandler);
@@ -115,7 +117,7 @@ public class UI {
 
     choice5 = new JButton("Look");
     choice5.setBackground(Color.black);
-    choice5.setForeground(Color.white);
+    choice5.setForeground(Color.black);
     choice5.setFont(normalFont);
     choice5.setFocusPainted(false);
     choice5.addActionListener(cHandler);
@@ -124,7 +126,7 @@ public class UI {
 
     choice6 = new JButton("Help");
     choice6.setBackground(Color.black);
-    choice6.setForeground(Color.white);
+    choice6.setForeground(Color.black);
     choice6.setFont(normalFont);
     choice6.setFocusPainted(false);
     choice6.addActionListener(cHandler);
@@ -137,7 +139,7 @@ public class UI {
     playerPanel.setLayout(new GridLayout(1,2));
     window.add(playerPanel);
 
-    playerNameLabel = new JLabel("Name:");
+    playerNameLabel = new JLabel("name: ");
     playerNameLabel.setFont(normalFont);
     playerNameLabel.setForeground(Color.white);
     playerPanel.add(playerNameLabel);
